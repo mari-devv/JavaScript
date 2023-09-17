@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+        
+        function nomePlaneta() {
+            var nome = prompt("Digite o nome do Planeta");
+            if (nome) {
+                if (planetas.includes(nome)){
+                    alert(nome + " está na lista de Planetas!");
+                }
+                else {
+                    alert(nome + " não está na lista de Planetas!");
+                }
+            } 
+            else {
+                alert("Você não digitou um nome válido.");
+            }
+
+        }   
+        nomePlaneta();
+        
+        
+    </script>
+</body>
+
+</html>
