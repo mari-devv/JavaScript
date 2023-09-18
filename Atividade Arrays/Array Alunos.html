@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var listaAluno = [];
+
+        cadastrarAluno();
+
+        function cadastrarAluno() {
+            var stop = true;
+
+            do {
+                let nomeAluno = prompt('Por favor, informe o nome da(o) Aluno:');
+
+                if (nomeAluno.toUpperCase() === 'PARE') {
+                    stop = false;
+                    break;
+                };
+
+                listaAluno.push(nomeAluno);
+                console.log(listaAluno);
+
+                alert("Sucesso! Aluno " + nomeAluno + " foi cadastrada(o) com sucesso!\n");
+
+            } while (stop == true)
+        }
+
+        function listarAlunos(lista) {
+            if (lista.length === 0) {
+                console.log("Nenhum aluno cadastrado.");
+            } else {
+                console.log("Lista de Alunos:");
+                for (let i = 0; i < lista.length; i++) {
+                    console.log((i + 1) + ". " + lista[i]);
+                }
+            }
+        }
+
+        listarAlunos(listaAluno);
+
+    </script>
+
+</body>
+
+</html>
